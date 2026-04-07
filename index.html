@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.P. Verueco Land Surveying Services | Cuyapo Nueva Ecija & Rosales Pangasinan</title>
+    <meta name="description" content="Licensed Geodetic Engineers in Nueva Ecija & Pangasinan. Expert Relocation, Subdivision, Topographic surveys, and Land Titling. PRC-compliant & accurate.">
+    <meta name="keywords" content="Land Surveying Philippines, Geodetic Engineer Nueva Ecija, Geodetic Engineer Pangasinan, Relocation Survey, Subdivision Survey, Land Titling Services">
+    <meta property="og:title" content="C.P. Verueco Land Surveying Services">
+    <meta property="og:description" content="Professional land surveying and geodetic engineering services in Cuyapo and Rosales. PRC Licensed.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── DESIGN TOKENS ───────────────────────────────────────────── */
+        :root {
+            --navy:        #0B1F3A;
+            --navy-mid:    #122850;
+            --navy-light:  #1a3566;
+            --gold:        #C9941A;
+            --gold-light:  #E5B040;
+            --gold-pale:   #F5E6C4;
+            --white:       #FFFFFF;
+            --off-white:   #F8F6F1;
+            --stone:       #EDE9E0;
+            --text:        #1A1A2E;
+            --muted:       #6B7280;
+            --border:      #E2DDD4;
+            --ff-display:  'Playfair Display', Georgia, serif;
+            --ff-body:     'DM Sans', sans-serif;
+            --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+            --shadow-sm:   0 2px 8px rgba(11,31,58,0.08);
+            --shadow-md:   0 8px 32px rgba(11,31,58,0.12);
+            --shadow-lg:   0 20px 60px rgba(11,31,58,0.18);
+        }
+
+        /* ─── RESET ───────────────────────────────────────────────────── */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; font-size:16px; }
+        body {
+            font-family: var(--ff-body);
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+        img { max-width:100%; display:block; }
+        a { text-decoration:none; color:inherit; }
+
+        /* ─── UTILITY ─────────────────────────────────────────────────── */
+        .container { max-width:1160px; margin:0 auto; padding:0 5%; }
+        .section-tag {
+            display:inline-block;
+            font-size:0.7rem;
+            font-weight:700;
+            letter-spacing:0.2em;
+            text-transform:uppercase;
+            color:var(--gold);
+            background:var(--gold-pale);
+            padding:5px 14px;
+            border-radius:50px;
+            margin-bottom:1rem;
+        }
+        .section-title {
+            font-family:var(--ff-display);
+            font-size:clamp(2rem, 4vw, 3rem);
+            font-weight:800;
+            color:var(--navy);
+            line-height:1.15;
+            margin-bottom:1rem;
+        }
+        .section-sub {
+            font-size:1.05rem;
+            color:var(--muted);
+            max-width:620px;
+        }
+        .section-header { margin-bottom:3.5rem; }
+        .section-header.center { text-align:center; }
+        .section-header.center .section-sub { margin:0 auto; }
+
+        /* ─── BUTTONS ─────────────────────────────────────────────────── */
+        .btn {
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:0.85rem 2rem;
+            border-radius:4px;
+            font-family:var(--ff-body);
+            font-weight:700;
+            font-size:0.92rem;
+            letter-spacing:0.01em;
+            cursor:pointer;
+            border:none;
+            transition:transform 0.2s var(--ease-out), box-shadow 0.2s, background 0.2s;
+        }
+        .btn:hover { transform:translateY(-2px); }
+        .btn-gold {
+            background:var(--gold);
+            color:var(--white);
+            box-shadow:0 4px 16px rgba(201,148,26,0.35);
+        }
+        .btn-gold:hover { background:var(--gold-light); box-shadow:0 8px 24px rgba(201,148,26,0.45); }
+        .btn-ghost {
+            background:transparent;
+            color:var(--white);
+            border:1.5px solid rgba(255,255,255,0.55);
+        }
+        .btn-ghost:hover { background:rgba(255,255,255,0.1); border-color:white; }
+        .btn-navy {
+            background:var(--navy);
+            color:var(--white);
+            box-shadow:var(--shadow-sm);
+        }
+        .btn-navy:hover { background:var(--navy-mid); }
+
+        /* ─── 1. NAVIGATION ───────────────────────────────────────────── */
+        header {
+            position:fixed; top:0; left:0; right:0;
+            z-index:900;
+            transition:background 0.3s, box-shadow 0.3s;
+        }
+        header.scrolled {
+            background:rgba(255,255,255,0.97);
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+            box-shadow:0 1px 0 var(--border), var(--shadow-sm);
+        }
+        .nav-inner {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:1rem 5%;
+            max-width:1280px;
+            margin:0 auto;
+        }
+        .logo {
+            display:flex;
+            flex-direction:column;
+            gap:2px;
+        }
+        .logo-main {
+            font-family:var(--ff-display);
+            font-size:1.15rem;
+            font-weight:800;
+            color:var(--navy);
+            letter-spacing:0.01em;
+            transition:color 0.2s;
+        }
+        header:not(.scrolled) .logo-main { color:var(--white); }
+        .logo-sub {
+            font-size:0.62rem;
+            font-weight:700;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:var(--gold);
+        }
+        .nav-links {
+            display:flex;
+            list-style:none;
+            align-items:center;
+            gap:2.2rem;
+        }
+        .nav-links a {
+            font-size:0.88rem;
+            font-weight:600;
+            color:rgba(255,255,255,0.85);
+            position:relative;
+            transition:color 0.2s;
+        }
+        .nav-links a::after {
+            content:'';
+            position:absolute;
+            bottom:-3px; left:0;
+            width:0; height:2px;
+            background:var(--gold);
+            transition:width 0.25s var(--ease-out);
+        }
+        .nav-links a:hover { color:var(--gold); }
+        .nav-links a:hover::after { width:100%; }
+        header.scrolled .nav-links a { color:var(--navy); }
+        header.scrolled .nav-links a:hover { color:var(--gold); }
+        .nav-cta {
+            padding:0.55rem 1.3rem !important;
+            font-size:0.85rem !important;
+        }
+        .menu-toggle {
+            display:none;
+            flex-direction:column;
+            gap:5px;
+            cursor:pointer;
+            background:none;
+            border:none;
+            padding:4px;
+        }
+        .menu-toggle span {
+            display:block;
+            width:24px; height:2px;
+            background:var(--white);
+            border-radius:2px;
+            transition:background 0.2s, transform 0.3s, opacity 0.3s;
+        }
+        header.scrolled .menu-toggle span { background:var(--navy); }
+        .menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px, 5px); }
+        .menu-toggle.active span:nth-child(2) { opacity:0; }
+        .menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px, -5px); }
+
+        /* ─── 2. HERO ─────────────────────────────────────────────────── */
+        .hero {
+            position:relative;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            overflow:hidden;
+            background:var(--navy);
+        }
+        /* Topographic SVG background */
+        .hero-topo {
+            position:absolute;
+            inset:0;
+            opacity:0.07;
+            background-image:
+                repeating-radial-gradient(ellipse at 30% 40%, transparent 0px, transparent 28px, rgba(201,148,26,0.6) 30px, transparent 32px),
+                repeating-radial-gradient(ellipse at 70% 60%, transparent 0px, transparent 48px, rgba(201,148,26,0.4) 50px, transparent 52px),
+                repeating-radial-gradient(ellipse at 50% 50%, transparent 0px, transparent 68px, rgba(255,255,255,0.3) 70px, transparent 72px);
+            pointer-events:none;
+        }
+        .hero-grid-overlay {
+            position:absolute;
+            inset:0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size:60px 60px;
+            pointer-events:none;
+        }
+        .hero-glow {
+            position:absolute;
+            width:600px; height:600px;
+            border-radius:50%;
+            background:radial-gradient(circle, rgba(201,148,26,0.15) 0%, transparent 70%);
+            top:50%; left:50%;
+            transform:translate(-50%,-50%);
+            pointer-events:none;
+        }
+        /* Animated corner brackets */
+        .hero-bracket {
+            position:absolute;
+            width:80px; height:80px;
+            opacity:0.25;
+        }
+        .hero-bracket.tl { top:12%; left:6%; border-top:2px solid var(--gold); border-left:2px solid var(--gold); }
+        .hero-bracket.tr { top:12%; right:6%; border-top:2px solid var(--gold); border-right:2px solid var(--gold); }
+        .hero-bracket.bl { bottom:12%; left:6%; border-bottom:2px solid var(--gold); border-left:2px solid var(--gold); }
+        .hero-bracket.br { bottom:12%; right:6%; border-bottom:2px solid var(--gold); border-right:2px solid var(--gold); }
+        .hero-content {
+            position:relative;
+            z-index:2;
+            text-align:center;
+            padding:140px 5% 80px;
+            max-width:900px;
+        }
+        .hero-eyebrow {
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            font-size:0.72rem;
+            font-weight:700;
+            letter-spacing:0.22em;
+            text-transform:uppercase;
+            color:var(--gold);
+            border:1px solid rgba(201,148,26,0.4);
+            padding:6px 16px;
+            border-radius:50px;
+            margin-bottom:1.8rem;
+            animation:fadeDown 0.8s var(--ease-out) both;
+        }
+        .hero-eyebrow::before {
+            content:'';
+            width:6px; height:6px;
+            border-radius:50%;
+            background:var(--gold);
+            animation:pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,100%{opacity:1;transform:scale(1);}
+            50%{opacity:0.5;transform:scale(1.4);}
+        }
+        .hero h1 {
+            font-family:var(--ff-display);
+            font-size:clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight:900;
+            color:var(--white);
+            line-height:1.1;
+            margin-bottom:1.5rem;
+            animation:fadeUp 0.9s 0.15s var(--ease-out) both;
+        }
+        .hero h1 em {
+            font-style:normal;
+            color:var(--gold);
+            position:relative;
+        }
+        .hero h1 em::after {
+            content:'';
+            position:absolute;
+            bottom:-4px; left:0; right:0;
+            height:3px;
+            background:linear-gradient(90deg, var(--gold), transparent);
+            border-radius:2px;
+        }
+        .hero-sub {
+            font-size:1.1rem;
+            color:rgba(255,255,255,0.75);
+            max-width:620px;
+            margin:0 auto 2.5rem;
+            animation:fadeUp 0.9s 0.3s var(--ease-out) both;
+        }
+        .hero-btns {
+            display:flex;
+            gap:1rem;
+            justify-content:center;
+            flex-wrap:wrap;
+            animation:fadeUp 0.9s 0.45s var(--ease-out) both;
+        }
+        .hero-badges {
+            display:flex;
+            justify-content:center;
+            gap:2rem;
+            margin-top:3rem;
+            flex-wrap:wrap;
+            animation:fadeUp 0.9s 0.6s var(--ease-out) both;
+        }
+        .hero-badge {
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:0.8rem;
+            color:rgba(255,255,255,0.55);
+        }
+        .hero-badge-dot {
+            width:8px; height:8px;
+            border-radius:50%;
+            background:var(--gold);
+            flex-shrink:0;
+        }
+        .hero-scroll {
+            position:absolute;
+            bottom:2rem; left:50%;
+            transform:translateX(-50%);
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:6px;
+            opacity:0.5;
+            animation:fadeIn 1s 1s both;
+        }
+        .hero-scroll span {
+            font-size:0.65rem;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:white;
+        }
+        .scroll-line {
+            width:1px; height:30px;
+            background:linear-gradient(white, transparent);
+            animation:scrollLine 1.5s infinite;
+        }
+        @keyframes scrollLine {
+            0%{height:0;opacity:1;}
+            100%{height:30px;opacity:0;}
+        }
+
+        /* ─── 3. STATS BAR ────────────────────────────────────────────── */
+        .stats-bar {
+            background:var(--white);
+            border-bottom:1px solid var(--border);
+            position:relative;
+            z-index:10;
+            box-shadow:var(--shadow-sm);
+        }
+        .stats-inner {
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            max-width:1160px;
+            margin:0 auto;
+        }
+        .stat-item {
+            padding:2rem 1.5rem;
+            text-align:center;
+            border-right:1px solid var(--border);
+            position:relative;
+            overflow:hidden;
+            transition:background 0.25s;
+        }
+        .stat-item:last-child { border-right:none; }
+        .stat-item::before {
+            content:'';
+            position:absolute;
+            bottom:0; left:0; right:0;
+            height:3px;
+            background:linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform:scaleX(0);
+            transform-origin:left;
+            transition:transform 0.4s var(--ease-out);
+        }
+        .stat-item:hover { background:var(--off-white); }
+        .stat-item:hover::before { transform:scaleX(1); }
+        .stat-num {
+            display:block;
+            font-family:var(--ff-display);
+            font-size:2.4rem;
+            font-weight:800;
+            color:var(--gold);
+            line-height:1;
+            margin-bottom:0.35rem;
+        }
+        .stat-label {
+            font-size:0.75rem;
+            font-weight:700;
+            letter-spacing:0.1em;
+            text-transform:uppercase;
+            color:var(--muted);
+        }
+
+        /* ─── 4. SERVICES ─────────────────────────────────────────────── */
+        .services-section {
+            padding:7rem 5%;
+            background:var(--off-white);
+        }
+        .services-grid {
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:1.5rem;
+        }
+        .service-card {
+            background:var(--white);
+            border:1px solid var(--border);
+            padding:2.2rem 1.8rem;
+            border-radius:6px;
+            position:relative;
+            overflow:hidden;
+            transition:transform 0.3s var(--ease-out), box-shadow 0.3s;
+            cursor:default;
+        }
+        .service-card::before {
+            content:'';
+            position:absolute;
+            top:0; left:0; right:0;
+            height:4px;
+            background:linear-gradient(90deg, var(--gold), var(--gold-light));
+        }
+        .service-card::after {
+            content:'';
+            position:absolute;
+            inset:0;
+            background:linear-gradient(135deg, rgba(201,148,26,0.05), transparent);
+            opacity:0;
+            transition:opacity 0.3s;
+        }
+        .service-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+        .service-card:hover::after { opacity:1; }
+        .service-icon {
+            width:44px; height:44px;
+            background:var(--gold-pale);
+            border-radius:8px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:1.2rem;
+            font-size:1.2rem;
+        }
+        .service-card h3 {
+            font-family:var(--ff-display);
+            font-size:1.05rem;
+            font-weight:700;
+            color:var(--navy);
+            margin-bottom:0.6rem;
+        }
+        .service-card p {
+            font-size:0.88rem;
+            color:var(--muted);
+            line-height:1.6;
+        }
+
+        /* ─── 5. WHY CHOOSE US ────────────────────────────────────────── */
+        .why-section {
+            background:var(--navy);
+            padding:7rem 5%;
+            position:relative;
+            overflow:hidden;
+        }
+        .why-section::before {
+            content:'';
+            position:absolute;
+            right:-200px; top:-200px;
+            width:600px; height:600px;
+            border-radius:50%;
+            border:1px solid rgba(201,148,26,0.1);
+        }
+        .why-section::after {
+            content:'';
+            position:absolute;
+            right:-100px; top:-100px;
+            width:400px; height:400px;
+            border-radius:50%;
+            border:1px solid rgba(201,148,26,0.08);
+        }
+        .why-inner {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:5rem;
+            align-items:center;
+            max-width:1160px;
+            margin:0 auto;
+            position:relative;
+            z-index:2;
+        }
+        .why-left h2 {
+            font-family:var(--ff-display);
+            font-size:clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight:800;
+            color:var(--white);
+            line-height:1.2;
+            margin-bottom:1.2rem;
+        }
+        .why-left h2 span { color:var(--gold); }
+        .why-left p {
+            color:rgba(255,255,255,0.65);
+            margin-bottom:2.5rem;
+            font-size:1rem;
+        }
+        .why-features {
+            display:flex;
+            flex-direction:column;
+            gap:1.4rem;
+        }
+        .why-feat {
+            display:flex;
+            gap:1rem;
+            align-items:flex-start;
+        }
+        .feat-check {
+            width:24px; height:24px;
+            background:rgba(201,148,26,0.2);
+            border:1px solid rgba(201,148,26,0.4);
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            margin-top:2px;
+        }
+        .feat-check svg {
+            width:12px; height:12px;
+            stroke:var(--gold);
+            stroke-width:2.5;
+            fill:none;
+        }
+        .feat-text strong {
+            display:block;
+            color:var(--white);
+            font-weight:600;
+            font-size:0.95rem;
+            margin-bottom:2px;
+        }
+        .feat-text span {
+            font-size:0.85rem;
+            color:rgba(255,255,255,0.5);
+        }
+        /* Credential card right side */
+        .why-card-stack {
+            display:flex;
+            flex-direction:column;
+            gap:1.2rem;
+        }
+        .credential-card {
+            background:rgba(255,255,255,0.06);
+            border:1px solid rgba(255,255,255,0.1);
+            border-radius:8px;
+            padding:1.8rem 2rem;
+            transition:background 0.3s;
+        }
+        .credential-card:hover { background:rgba(255,255,255,0.09); }
+        .credential-card .label {
+            font-size:0.7rem;
+            font-weight:700;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:var(--gold);
+            margin-bottom:0.4rem;
+        }
+        .credential-card .value {
+            font-family:var(--ff-display);
+            font-size:1.3rem;
+            color:var(--white);
+            font-weight:700;
+        }
+        .credential-card .desc {
+            font-size:0.82rem;
+            color:rgba(255,255,255,0.5);
+            margin-top:4px;
+        }
+
+        /* ─── 6. TESTIMONIALS ─────────────────────────────────────────── */
+        .testimonials-section {
+            padding:7rem 5%;
+            background:var(--white);
+        }
+        .testimonials-track-wrap {
+            overflow:hidden;
+            margin:0 -2%;
+            padding:0 2%;
+        }
+        .testimonials-track {
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:1.8rem;
+            transition:transform 0.5s var(--ease-out);
+        }
+        .t-card {
+            background:var(--off-white);
+            border:1px solid var(--border);
+            border-radius:8px;
+            padding:2.5rem 2rem;
+            display:flex;
+            flex-direction:column;
+            position:relative;
+            transition:transform 0.3s var(--ease-out), box-shadow 0.3s;
+        }
+        .t-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+        .t-card::before {
+            content:'\201C';
+            position:absolute;
+            top:1.2rem; right:1.8rem;
+            font-family:var(--ff-display);
+            font-size:5rem;
+            line-height:1;
+            color:var(--gold-pale);
+        }
+        .t-stars { color:var(--gold); font-size:0.9rem; letter-spacing:2px; margin-bottom:0.8rem; }
+        .t-badge {
+            display:inline-block;
+            background:var(--navy);
+            color:var(--white);
+            font-size:0.65rem;
+            font-weight:700;
+            letter-spacing:0.12em;
+            text-transform:uppercase;
+            padding:4px 12px;
+            border-radius:50px;
+            margin-bottom:1.4rem;
+            width:fit-content;
+        }
+        .t-quote {
+            font-size:0.95rem;
+            color:var(--muted);
+            font-style:italic;
+            flex:1;
+            line-height:1.7;
+            margin-bottom:1.8rem;
+        }
+        .t-author {
+            display:flex;
+            align-items:center;
+            gap:1rem;
+            padding-top:1.4rem;
+            border-top:1px solid var(--border);
+        }
+        .t-avatar {
+            width:42px; height:42px;
+            border-radius:50%;
+            background:var(--navy);
+            color:var(--white);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:700;
+            font-size:0.85rem;
+            flex-shrink:0;
+        }
+        .t-author-name { font-weight:700; font-size:0.92rem; color:var(--navy); }
+        .t-author-loc { font-size:0.78rem; color:var(--muted); }
+        .slider-nav {
+            display:none;
+            justify-content:center;
+            align-items:center;
+            gap:1.2rem;
+            margin-top:2.5rem;
+        }
+        .s-btn {
+            width:40px; height:40px;
+            border-radius:50%;
+            background:var(--navy);
+            color:var(--white);
+            border:none;
+            cursor:pointer;
+            font-size:1rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:background 0.2s;
+        }
+        .s-btn:hover { background:var(--gold); }
+        .s-dots { display:flex; gap:6px; align-items:center; }
+        .s-dot {
+            width:7px; height:7px;
+            border-radius:50%;
+            background:var(--border);
+            transition:all 0.3s;
+        }
+        .s-dot.active { background:var(--gold); width:20px; border-radius:4px; }
+        .t-disclaimer {
+            text-align:center;
+            font-size:0.73rem;
+            color:var(--muted);
+            margin-top:2.5rem;
+        }
+
+        /* ─── 7. HOW IT WORKS ─────────────────────────────────────────── */
+        .process-section {
+            padding:7rem 5%;
+            background:var(--navy);
+            position:relative;
+            overflow:hidden;
+        }
+        .process-section .section-title { color:var(--white); }
+        .process-section .section-sub { color:rgba(255,255,255,0.55); }
+        .process-grid {
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:0;
+            position:relative;
+        }
+        /* Connector line */
+        .process-grid::before {
+            content:'';
+            position:absolute;
+            top:28px; left:calc(12.5% + 20px);
+            right:calc(12.5% + 20px);
+            height:1px;
+            background:linear-gradient(90deg, var(--gold), rgba(201,148,26,0.2));
+        }
+        .process-step {
+            text-align:center;
+            padding:0 1.5rem;
+            position:relative;
+        }
+        .step-circle {
+            width:56px; height:56px;
+            border:2px solid var(--gold);
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:0 auto 1.5rem;
+            background:var(--navy);
+            font-family:var(--ff-display);
+            font-size:1.2rem;
+            font-weight:800;
+            color:var(--gold);
+            position:relative;
+            z-index:2;
+            transition:background 0.3s, color 0.3s;
+        }
+        .process-step:hover .step-circle {
+            background:var(--gold);
+            color:var(--white);
+        }
+        .process-step h3 {
+            font-family:var(--ff-display);
+            font-size:1.1rem;
+            color:var(--white);
+            margin-bottom:0.5rem;
+        }
+        .process-step p { font-size:0.85rem; color:rgba(255,255,255,0.5); }
+
+        /* ─── 8. FAQ ──────────────────────────────────────────────────── */
+        .faq-section {
+            padding:7rem 5%;
+            background:var(--off-white);
+        }
+        .faq-wrap {
+            max-width:760px;
+            margin:0 auto;
+        }
+        .faq-item {
+            background:var(--white);
+            border:1px solid var(--border);
+            border-radius:6px;
+            margin-bottom:0.75rem;
+            overflow:hidden;
+            transition:box-shadow 0.25s;
+        }
+        .faq-item.open { box-shadow:var(--shadow-sm); }
+        .faq-q {
+            width:100%;
+            padding:1.3rem 1.6rem;
+            background:none;
+            border:none;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            cursor:pointer;
+            text-align:left;
+            font-family:var(--ff-body);
+            font-weight:700;
+            font-size:0.98rem;
+            color:var(--navy);
+            gap:1rem;
+            transition:color 0.2s;
+        }
+        .faq-item.open .faq-q { color:var(--gold); }
+        .faq-icon-wrap {
+            width:26px; height:26px;
+            border-radius:50%;
+            border:1.5px solid var(--border);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            transition:border-color 0.25s, background 0.25s, transform 0.3s;
+        }
+        .faq-item.open .faq-icon-wrap {
+            background:var(--gold);
+            border-color:var(--gold);
+            transform:rotate(45deg);
+        }
+        .faq-icon-wrap svg {
+            width:12px; height:12px;
+            stroke:var(--muted);
+            stroke-width:2.5;
+            fill:none;
+            transition:stroke 0.25s;
+        }
+        .faq-item.open .faq-icon-wrap svg { stroke:white; }
+        .faq-a {
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.4s var(--ease-out);
+        }
+        .faq-item.open .faq-a { max-height:300px; }
+        .faq-a-inner {
+            padding:0 1.6rem 1.4rem;
+            font-size:0.9rem;
+            color:var(--muted);
+            line-height:1.7;
+        }
+        .faq-cta {
+            text-align:center;
+            margin-top:3rem;
+            font-size:0.95rem;
+        }
+        .faq-cta a { color:var(--gold); font-weight:700; }
+
+        /* ─── 9. COVERAGE ─────────────────────────────────────────────── */
+        .coverage-section {
+            padding:7rem 5% 0;
+            background:var(--white);
+        }
+        .offices-grid {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:1.8rem;
+            margin-bottom:3.5rem;
+        }
+        .office-card {
+            background:var(--off-white);
+            border:1px solid var(--border);
+            border-radius:8px;
+            padding:2rem 2.2rem;
+            display:flex;
+            gap:1.2rem;
+            align-items:flex-start;
+            transition:box-shadow 0.25s;
+        }
+        .office-card:hover { box-shadow:var(--shadow-md); }
+        .office-pin {
+            width:44px; height:44px;
+            background:var(--gold-pale);
+            border-radius:8px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            font-size:1.3rem;
+        }
+        .office-card h3 {
+            font-family:var(--ff-display);
+            font-size:1.05rem;
+            color:var(--navy);
+            margin-bottom:0.3rem;
+        }
+        .office-card p { font-size:0.88rem; color:var(--muted); }
+        .office-tag {
+            display:inline-block;
+            font-size:0.65rem;
+            font-weight:700;
+            letter-spacing:0.12em;
+            text-transform:uppercase;
+            color:var(--gold);
+            background:var(--gold-pale);
+            padding:3px 10px;
+            border-radius:50px;
+            margin-bottom:0.5rem;
+        }
+        .coverage-tags {
+            display:flex;
+            flex-wrap:wrap;
+            gap:0.6rem;
+            margin-top:0.8rem;
+        }
+        .c-tag {
+            font-size:0.78rem;
+            background:var(--stone);
+            padding:3px 12px;
+            border-radius:50px;
+            color:var(--muted);
+        }
+        .map-wrapper {
+            border-top:4px solid var(--gold);
+            overflow:hidden;
+            line-height:0;
+        }
+        .map-wrapper iframe {
+            width:100%;
+            height:380px;
+            border:none;
+            display:block;
+        }
+
+        /* ─── 10. CONTACT ─────────────────────────────────────────────── */
+        .contact-section {
+            padding:7rem 5%;
+            background:var(--off-white);
+        }
+        .contact-wrap {
+            display:grid;
+            grid-template-columns:1fr 1.6fr;
+            gap:3rem;
+            max-width:1160px;
+            margin:0 auto;
+        }
+        .contact-info {
+            background:var(--navy);
+            border-radius:10px;
+            padding:3rem 2.5rem;
+            color:white;
+            position:relative;
+            overflow:hidden;
+        }
+        .contact-info::after {
+            content:'';
+            position:absolute;
+            bottom:-60px; right:-60px;
+            width:180px; height:180px;
+            border-radius:50%;
+            border:1px solid rgba(201,148,26,0.15);
+        }
+        .contact-info h2 {
+            font-family:var(--ff-display);
+            color:white;
+            font-size:1.8rem;
+            margin-bottom:0.5rem;
+        }
+        .contact-info > p {
+            color:rgba(255,255,255,0.55);
+            font-size:0.9rem;
+            margin-bottom:2.5rem;
+        }
+        .c-detail {
+            display:flex;
+            align-items:flex-start;
+            gap:0.9rem;
+            margin-bottom:1.5rem;
+        }
+        .c-detail-icon {
+            width:36px; height:36px;
+            background:rgba(201,148,26,0.2);
+            border-radius:6px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            font-size:1rem;
+        }
+        .c-detail strong { display:block; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:2px; }
+        .c-detail span { font-size:0.9rem; color:rgba(255,255,255,0.8); }
+        .c-divider { border:none; border-top:1px solid rgba(255,255,255,0.1); margin:2rem 0; }
+        .contact-form-box {
+            background:var(--white);
+            border-radius:10px;
+            padding:3rem;
+            box-shadow:var(--shadow-sm);
+        }
+        .contact-form-box h3 {
+            font-family:var(--ff-display);
+            font-size:1.4rem;
+            color:var(--navy);
+            margin-bottom:0.4rem;
+        }
+        .contact-form-box > p {
+            font-size:0.88rem;
+            color:var(--muted);
+            margin-bottom:2rem;
+        }
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+        .form-group { margin-bottom:1.2rem; }
+        .form-group label {
+            display:block;
+            font-size:0.78rem;
+            font-weight:700;
+            letter-spacing:0.08em;
+            text-transform:uppercase;
+            color:var(--navy);
+            margin-bottom:0.45rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width:100%;
+            padding:0.75rem 1rem;
+            border:1.5px solid var(--border);
+            border-radius:5px;
+            font-family:var(--ff-body);
+            font-size:0.92rem;
+            color:var(--text);
+            background:var(--white);
+            transition:border-color 0.2s, box-shadow 0.2s;
+            outline:none;
+            -webkit-appearance:none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color:var(--gold);
+            box-shadow:0 0 0 3px rgba(201,148,26,0.1);
+        }
+        .form-group textarea { resize:vertical; min-height:100px; }
+        .form-note { font-size:0.78rem; color:var(--muted); margin-bottom:1.5rem; }
+        .form-success {
+            display:none;
+            background:#f0fdf4;
+            border:1px solid #bbf7d0;
+            border-radius:6px;
+            padding:1rem 1.2rem;
+            font-size:0.9rem;
+            color:#166534;
+            margin-top:1rem;
+        }
+
+        /* ─── 11. FOOTER ──────────────────────────────────────────────── */
+        .footer {
+            background:var(--navy);
+            color:rgba(255,255,255,0.7);
+            padding:5rem 5% 2.5rem;
+            border-top:4px solid var(--gold);
+        }
+        .footer-grid {
+            display:grid;
+            grid-template-columns:2fr 1fr 1fr 1.5fr;
+            gap:3rem;
+            max-width:1160px;
+            margin:0 auto;
+        }
+        .footer-brand .brand-name {
+            font-family:var(--ff-display);
+            font-size:1.4rem;
+            color:var(--white);
+            font-weight:800;
+            margin-bottom:0.3rem;
+        }
+        .footer-brand .brand-tagline {
+            font-size:0.75rem;
+            letter-spacing:0.15em;
+            text-transform:uppercase;
+            color:var(--gold);
+            margin-bottom:1.2rem;
+        }
+        .footer-brand p {
+            font-size:0.88rem;
+            line-height:1.7;
+            color:rgba(255,255,255,0.45);
+            max-width:280px;
+        }
+        .prc-badge {
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            background:rgba(201,148,26,0.15);
+            border:1px solid rgba(201,148,26,0.3);
+            padding:6px 14px;
+            border-radius:50px;
+            font-size:0.72rem;
+            font-weight:700;
+            letter-spacing:0.1em;
+            color:var(--gold);
+            text-transform:uppercase;
+            margin-top:1.5rem;
+        }
+        .footer-col h4 {
+            font-size:0.75rem;
+            font-weight:700;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:rgba(255,255,255,0.4);
+            margin-bottom:1.2rem;
+        }
+        .footer-col ul { list-style:none; }
+        .footer-col ul li { margin-bottom:0.6rem; }
+        .footer-col ul li a {
+            font-size:0.88rem;
+            color:rgba(255,255,255,0.65);
+            transition:color 0.2s;
+        }
+        .footer-col ul li a:hover { color:var(--gold); }
+        .footer-contact-item {
+            display:flex;
+            align-items:flex-start;
+            gap:0.7rem;
+            margin-bottom:0.8rem;
+            font-size:0.85rem;
+            color:rgba(255,255,255,0.6);
+        }
+        .footer-contact-item span:first-child { color:var(--gold); flex-shrink:0; margin-top:1px; }
+        .footer-bottom {
+            border-top:1px solid rgba(255,255,255,0.08);
+            margin-top:3.5rem;
+            padding-top:2rem;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:1rem;
+            font-size:0.78rem;
+            color:rgba(255,255,255,0.3);
+            max-width:1160px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .footer-bottom a { color:rgba(255,255,255,0.4); }
+
+        /* ─── 12. FLOATING BUTTONS ────────────────────────────────────── */
+        .float-stack {
+            position:fixed;
+            bottom:85px; right:18px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            z-index:9000;
+        }
+        .float-btn {
+            width:50px; height:50px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border:2px solid rgba(255,255,255,0.8);
+            box-shadow:0 4px 16px rgba(0,0,0,0.25);
+            transition:transform 0.2s var(--ease-out), box-shadow 0.2s;
+            position:relative;
+        }
+        .float-btn:hover { transform:scale(1.1); box-shadow:0 6px 24px rgba(0,0,0,0.35); }
+        .float-btn svg { width:22px; height:22px; }
+        .fb-btn { background:#0084FF; }
+        .vb-btn { background:#7360F2; }
+        .float-tooltip {
+            position:absolute;
+            right:62px;
+            background:var(--navy);
+            color:white;
+            padding:6px 12px;
+            border-radius:6px;
+            font-size:0.75rem;
+            font-weight:600;
+            white-space:nowrap;
+            pointer-events:none;
+            opacity:0;
+            visibility:hidden;
+            transition:opacity 0.2s, visibility 0.2s;
+            box-shadow:var(--shadow-sm);
+        }
+        .float-tooltip::after {
+            content:'';
+            position:absolute;
+            right:-6px; top:50%;
+            transform:translateY(-50%);
+            border:6px solid transparent;
+            border-right:none;
+            border-left-color:var(--navy);
+        }
+        @media (hover: hover) {
+            .float-btn:hover .float-tooltip { opacity:1; visibility:visible; }
+        }
+        .float-call {
+            position:fixed;
+            bottom:20px; right:18px;
+            background:var(--gold);
+            color:white;
+            padding:11px 22px;
+            border-radius:50px;
+            font-weight:700;
+            font-size:0.88rem;
+            box-shadow:0 4px 16px rgba(201,148,26,0.5);
+            z-index:9001;
+            display:none;
+            align-items:center;
+            gap:7px;
+            transition:transform 0.2s, box-shadow 0.2s;
+        }
+        .float-call:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(201,148,26,0.6); }
+
+        /* ─── ANIMATIONS ──────────────────────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(24px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        @keyframes fadeDown {
+            from { opacity:0; transform:translateY(-16px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity:0; }
+            to   { opacity:1; }
+        }
+        .reveal {
+            opacity:0;
+            transform:translateY(30px);
+            transition:opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+        }
+        .reveal.visible {
+            opacity:1;
+            transform:none;
+        }
+        .reveal-delay-1 { transition-delay:0.1s; }
+        .reveal-delay-2 { transition-delay:0.2s; }
+        .reveal-delay-3 { transition-delay:0.3s; }
+        .reveal-delay-4 { transition-delay:0.4s; }
+
+        /* ─── RESPONSIVE ──────────────────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns:repeat(2, 1fr); }
+            .footer-grid { grid-template-columns:1fr 1fr; }
+        }
+        @media (max-width: 900px) {
+            .why-inner { grid-template-columns:1fr; gap:3rem; }
+            .process-grid { grid-template-columns:repeat(2, 1fr); gap:2rem; }
+            .process-grid::before { display:none; }
+            .contact-wrap { grid-template-columns:1fr; }
+        }
+        @media (max-width: 768px) {
+            .menu-toggle { display:flex; }
+            .nav-links {
+                position:absolute;
+                top:100%; left:0; right:0;
+                background:var(--white);
+                flex-direction:column;
+                padding:2rem;
+                gap:1.2rem;
+                box-shadow:var(--shadow-md);
+                display:none;
+            }
+            .nav-links.open { display:flex; }
+            .nav-links a { color:var(--navy) !important; }
+            .stats-inner { grid-template-columns:repeat(2, 1fr); }
+            .stat-item:nth-child(2) { border-right:none; }
+            .stat-item:nth-child(3),
+            .stat-item:nth-child(4) { border-top:1px solid var(--border); }
+            .offices-grid { grid-template-columns:1fr; }
+            .form-row { grid-template-columns:1fr; }
+            .footer-grid { grid-template-columns:1fr; }
+            .footer-bottom { flex-direction:column; text-align:center; }
+            .float-call { display:flex; }
+            /* mobile testimonial slider */
+            .testimonials-track {
+                grid-template-columns:repeat(3, 100%);
+                gap:0;
+            }
+            .slider-nav { display:flex; }
+        }
+        @media (max-width: 500px) {
+            .services-grid { grid-template-columns:1fr; }
+            .process-grid { grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     1. NAVIGATION
+════════════════════════════════════════════════════════════════════════ -->
+<header id="site-header">
+    <nav class="nav-inner">
+        <a href="#home" class="logo">
+            <span class="logo-main">C.P. Verueco</span>
+            <span class="logo-sub">Land Surveying Services</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#coverage">Coverage</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:09064975039" class="btn btn-gold nav-cta">Call Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     2. HERO
+════════════════════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+    <div class="hero-topo"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-bracket tl"></div>
+    <div class="hero-bracket tr"></div>
+    <div class="hero-bracket bl"></div>
+    <div class="hero-bracket br"></div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">PRC-Licensed Geodetic Engineers</div>
+        <h1>Your Trusted Land Surveyors in<br><em>Nueva Ecija &amp; Pangasinan</em></h1>
+        <p class="hero-sub">Professional land surveying, titling, and geodetic engineering for individuals, developers, and government agencies. Accurate. Reliable. DENR &amp; LRA-compliant.</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn btn-gold">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Request a Survey
+            </a>
+            <a href="#services" class="btn btn-ghost">
+                View Our Services
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="hero-badges">
+            <span class="hero-badge"><span class="hero-badge-dot"></span>500+ Projects Completed</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span>2 Office Locations</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span>All Survey Types Covered</span>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     3. STATS BAR
+════════════════════════════════════════════════════════════════════════ -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item reveal">
+            <span class="stat-num" data-count="500">0</span>
+            <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Office Locations</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+            <span class="stat-num">PRC</span>
+            <span class="stat-label">Licensed Geodetic Engineers</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Survey Types Covered</span>
+        </div>
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     4. SERVICES
+════════════════════════════════════════════════════════════════════════ -->
+<section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Our Land Surveying Services</h2>
+            <p class="section-sub">Comprehensive geodetic solutions for landowners, developers, and local government units across Central Luzon.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">📍</div>
+                <h3>Relocation Survey</h3>
+                <p>Verify and restore the exact boundaries of your land parcel with precision instruments and official documentation.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon">📐</div>
+                <h3>Subdivision Survey</h3>
+                <p>Legally divide land into multiple lots with precise measurements, fully compliant with DENR requirements.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon">🗺️</div>
+                <h3>Topographic Survey</h3>
+                <p>Detailed elevation mapping for engineering design, infrastructure, and land development projects.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon">📋</div>
+                <h3>Sketch &amp; Vicinity Map</h3>
+                <p>Official location maps accepted by courts, LGUs, and government agencies for legal and titling purposes.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🏗️</div>
+                <h3>As-built Survey</h3>
+                <p>Verify that structures are built according to approved plans and engineering specifications.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon">💼</div>
+                <h3>Consultancy Services</h3>
+                <p>Expert advice for land disputes, boundary issues, and development planning from licensed engineers.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon">📜</div>
+                <h3>Land Titling</h3>
+                <p>Full assistance in securing and processing land titles with LRA and DENR offices.</p>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon">🏡</div>
+                <h3>Real Estate Services</h3>
+                <p>Property listings, valuation assistance, and buyer guidance for local and provincial markets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     5. WHY CHOOSE US
+════════════════════════════════════════════════════════════════════════ -->
+<section class="why-section" id="about">
+    <div class="why-inner">
+        <div class="why-left reveal">
+            <span class="section-tag" style="background:rgba(201,148,26,0.15); color:var(--gold);">Why Choose Us</span>
+            <h2>Precision You Can Trust, <span>Service</span> You Can Rely On</h2>
+            <p>We are a licensed geodetic engineering firm dedicated to delivering accurate, legally compliant survey results across Central Luzon. Our team brings deep local knowledge and professional integrity to every project.</p>
+            <a href="#contact" class="btn btn-gold">Schedule a Free Consultation</a>
+
+            <ul class="why-features" style="margin-top:2.5rem;">
+                <li class="why-feat">
+                    <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="feat-text"><strong>PRC-Licensed Geodetic Engineers</strong><span>Board-certified professionals on every project</span></div>
+                </li>
+                <li class="why-feat">
+                    <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="feat-text"><strong>Deep DENR &amp; LRA Knowledge</strong><span>We know every requirement and process</span></div>
+                </li>
+                <li class="why-feat">
+                    <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="feat-text"><strong>Two Conveniently Located Offices</strong><span>Cuyapo, Nueva Ecija &amp; Rosales, Pangasinan</span></div>
+                </li>
+                <li class="why-feat">
+                    <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="feat-text"><strong>Fast Project Turnaround</strong><span>Efficient fieldwork and documentation delivery</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="why-card-stack reveal reveal-delay-2">
+            <div class="credential-card">
+                <div class="label">License &amp; Regulation</div>
+                <div class="value">PRC-Certified</div>
+                <div class="desc">Professional Regulation Commission, Philippines</div>
+            </div>
+            <div class="credential-card">
+                <div class="label">Coverage Region</div>
+                <div class="value">Central Luzon</div>
+                <div class="desc">Nueva Ecija, Pangasinan &amp; surrounding provinces</div>
+            </div>
+            <div class="credential-card">
+                <div class="label">Compliance</div>
+                <div class="value">DENR &amp; LRA Ready</div>
+                <div class="desc">All deliverables meet government agency standards</div>
+            </div>
+            <div class="credential-card">
+                <div class="label">Service Record</div>
+                <div class="value">500+ Projects</div>
+                <div class="desc">Serving landowners, LGUs &amp; developers</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     6. TESTIMONIALS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header center reveal">
+            <span class="section-tag">Client Feedback</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-sub">Trusted by landowners, developers, and local government units across Central Luzon.</p>
+        </div>
+        <div class="testimonials-track-wrap">
+            <div class="testimonials-track" id="tTrack">
+                <div class="t-card reveal">
+                    <div class="t-stars">★★★★★</div>
+                    <span class="t-badge">Relocation Survey</span>
+                    <p class="t-quote">"C.P. Verueco's team was professional and thorough. They resolved a long-standing boundary dispute for our family land in Cuyapo in just a few days. The documentation was complete and the engineer was very patient explaining everything."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">RM</div>
+                        <div>
+                            <div class="t-author-name">Roberto M.</div>
+                            <div class="t-author-loc">Cuyapo, Nueva Ecija</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card reveal reveal-delay-1">
+                    <div class="t-stars">★★★★★</div>
+                    <span class="t-badge">Land Titling</span>
+                    <p class="t-quote">"Napakagaling ng team nila! Tinulungan nila kaming makuha ang titulo ng aming lupa ng walang abala. Mabilis at tapat ang serbisyo. Taos-pusong nagpapasalamat ang aming pamilya sa C.P. Verueco."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">MS</div>
+                        <div>
+                            <div class="t-author-name">Maria Santos</div>
+                            <div class="t-author-loc">Rosales, Pangasinan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card reveal reveal-delay-2">
+                    <div class="t-stars">★★★★★</div>
+                    <span class="t-badge">Subdivision Survey</span>
+                    <p class="t-quote">"We hired them for a subdivision survey of our 3-hectare property. The documentation was complete and fully compliant with DENR requirements. I highly recommend C.P. Verueco for any land surveying needs."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">JD</div>
+                        <div>
+                            <div class="t-author-name">Engr. Jun Dela Cruz</div>
+                            <div class="t-author-loc">Sto. Domingo, Nueva Ecija</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav" id="sliderNav">
+            <button class="s-btn" onclick="prevSlide()">&#10094;</button>
+            <div class="s-dots" id="sDots">
+                <span class="s-dot active"></span>
+                <span class="s-dot"></span>
+                <span class="s-dot"></span>
+            </div>
+            <button class="s-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <p class="t-disclaimer">* Testimonials based on client feedback received through referrals and direct communication.</p>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     7. HOW IT WORKS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="process-section" id="process">
+    <div class="container">
+        <div class="section-header center reveal" style="margin-bottom:4rem;">
+            <span class="section-tag" style="background:rgba(201,148,26,0.15); color:var(--gold);">Our Process</span>
+            <h2 class="section-title" style="color:white;">How It Works</h2>
+            <p class="section-sub" style="color:rgba(255,255,255,0.55);">From your first inquiry to receiving sealed, official survey maps — here's what to expect.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <div class="step-circle">1</div>
+                <h3>Contact Us</h3>
+                <p>Inquire via phone, Messenger, or our contact form. We'll respond within 24 hours.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-1">
+                <div class="step-circle">2</div>
+                <h3>Site Visit</h3>
+                <p>Our licensed engineers conduct an initial assessment of your property and discuss requirements.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-2">
+                <div class="step-circle">3</div>
+                <h3>Field Survey</h3>
+                <p>Precise technical fieldwork using calibrated instruments, with full documentation.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-3">
+                <div class="step-circle">4</div>
+                <h3>Delivery</h3>
+                <p>Receive official sealed survey maps and documents ready for government submission.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     8. FAQ
+════════════════════════════════════════════════════════════════════════ -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-header center reveal">
+            <span class="section-tag">Common Questions</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-sub">Have questions about land surveying? We've answered the most common ones below.</p>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-item open">
+                <button class="faq-q">
+                    <span>How long does a land survey take?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">A Relocation Survey typically takes 1–3 days for fieldwork, plus additional time for preparing the official documentation. Larger or more complex projects such as Subdivision Surveys may take longer depending on lot size and filing requirements.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>What documents do I need to prepare?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">You will generally need a copy of your land title (TCT or OCT), the most recent tax declaration, and a valid government-issued ID. Additional documents may be required depending on the specific service — our team will guide you through the full checklist.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Do you assist with land titling?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Yes. We provide end-to-end land titling assistance, coordinating directly with the Land Registration Authority (LRA) and the Department of Environment and Natural Resources (DENR) on your behalf. We help you navigate the entire process from survey to title issuance.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>How much does a survey cost?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Survey fees vary depending on the type of survey, the size of the property, and the location. Contact us for a free, no-obligation estimate. We ensure transparent pricing with no hidden charges.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Are your engineers PRC-licensed?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Yes. All of our geodetic engineers are board-certified and licensed by the Professional Regulation Commission (PRC) of the Philippines. Our surveys are legally valid and accepted by all government agencies.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">
+                    <span>Do you serve areas outside Nueva Ecija?</span>
+                    <div class="faq-icon-wrap"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Our primary service areas are Nueva Ecija and Pangasinan. However, we can accommodate major projects in nearby provinces. Contact us to discuss your specific location and requirements.</div></div>
+            </div>
+        </div>
+        <div class="faq-cta reveal">Still have questions? Call us at <a href="tel:09064975039">0906 497 5039</a> — we're happy to help.</div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     9. COVERAGE AREA
+════════════════════════════════════════════════════════════════════════ -->
+<section class="coverage-section" id="coverage">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Where We Operate</span>
+            <h2 class="section-title">Areas We Serve</h2>
+            <p class="section-sub">Two offices strategically located to serve landowners and developers across Central Luzon.</p>
+        </div>
+        <div class="offices-grid">
+            <div class="office-card reveal">
+                <div class="office-pin">🏢</div>
+                <div>
+                    <span class="office-tag">Main Office</span>
+                    <h3>Cuyapo, Nueva Ecija</h3>
+                    <p>Brgy. Sabit, Cuyapo, Nueva Ecija</p>
+                    <div class="coverage-tags">
+                        <span class="c-tag">Cuyapo</span>
+                        <span class="c-tag">Sto. Domingo</span>
+                        <span class="c-tag">Talavera</span>
+                        <span class="c-tag">Nampicuan</span>
+                        <span class="c-tag">Quezon</span>
+                        <span class="c-tag">Lupao</span>
+                    </div>
+                </div>
+            </div>
+            <div class="office-card reveal reveal-delay-2">
+                <div class="office-pin">🏢</div>
+                <div>
+                    <span class="office-tag">Branch Office</span>
+                    <h3>Rosales, Pangasinan</h3>
+                    <p>Brgy. Salvacion, Rosales, Pangasinan</p>
+                    <div class="coverage-tags">
+                        <span class="c-tag">Rosales</span>
+                        <span class="c-tag">San Quintin</span>
+                        <span class="c-tag">Umingan</span>
+                        <span class="c-tag">Sta. Maria</span>
+                        <span class="c-tag">Balungao</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-wrapper">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246038.2944478!2d120.65!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUxJzAwLjAiTiAxMjDCsDM5JzAwLjAiRQ!5e0!3m2!1sen!2sph!4v1609459200000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="C.P. Verueco Office Locations — Nueva Ecija & Pangasinan">
+        </iframe>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     10. CONTACT
+════════════════════════════════════════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-header center reveal">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Request a Survey or Free Estimate</h2>
+            <p class="section-sub">Fill out the form and we'll get back to you within 24 hours, or call us directly.</p>
+        </div>
+        <div class="contact-wrap">
+            <div class="contact-info reveal">
+                <h2>Contact Information</h2>
+                <p>Reach us through any channel below. We serve clients Monday to Saturday.</p>
+
+                <div class="c-detail">
+                    <div class="c-detail-icon">📞</div>
+                    <div>
+                        <strong>Phone / Viber</strong>
+                        <span><a href="tel:09064975039" style="color:rgba(255,255,255,0.8);">0906 497 5039</a></span>
+                    </div>
+                </div>
+                <div class="c-detail">
+                    <div class="c-detail-icon">💬</div>
+                    <div>
+                        <strong>Facebook Messenger</strong>
+                        <span><a href="https://m.me/cpverueco" target="_blank" style="color:rgba(255,255,255,0.8);">fb.com/cpverueco</a></span>
+                    </div>
+                </div>
+                <div class="c-detail">
+                    <div class="c-detail-icon">📍</div>
+                    <div>
+                        <strong>Main Office</strong>
+                        <span>Brgy. Sabit, Cuyapo, Nueva Ecija</span>
+                    </div>
+                </div>
+                <div class="c-detail">
+                    <div class="c-detail-icon">📍</div>
+                    <div>
+                        <strong>Branch Office</strong>
+                        <span>Brgy. Salvacion, Rosales, Pangasinan</span>
+                    </div>
+                </div>
+                <hr class="c-divider">
+                <div class="c-detail">
+                    <div class="c-detail-icon">🕐</div>
+                    <div>
+                        <strong>Office Hours</strong>
+                        <span>Monday – Saturday: 8:00 AM – 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box reveal reveal-delay-2">
+                <h3>Send Us a Message</h3>
+                <p>Tell us about your property and we'll prepare a tailored estimate.</p>
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxxx" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address (optional)</label>
+                        <input type="email" id="email" name="email" placeholder="juandelacruz@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service…</option>
+                            <option>Relocation Survey</option>
+                            <option>Subdivision Survey</option>
+                            <option>Topographic Survey</option>
+                            <option>Sketch &amp; Vicinity Map</option>
+                            <option>As-built Survey</option>
+                            <option>Land Titling Assistance</option>
+                            <option>Consultancy</option>
+                            <option>Real Estate Services</option>
+                            <option>Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Property Location</label>
+                        <input type="text" id="location" name="location" placeholder="e.g. Barangay, Municipality, Province">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" placeholder="Describe your property or project (lot size, type of survey needed, any existing documents, etc.)"></textarea>
+                    </div>
+                    <p class="form-note">* Required fields. We typically respond within 24 hours.</p>
+                    <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center; padding:1rem;">
+                        Send Inquiry
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        ✅ Thank you! Your inquiry has been received. We'll be in touch shortly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     11. FOOTER
+════════════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="brand-name">C.P. Verueco</div>
+            <div class="brand-tagline">Land Surveying Services</div>
+            <p>Licensed geodetic engineering firm serving landowners, developers, and government agencies across Nueva Ecija, Pangasinan, and Central Luzon.</p>
+            <div class="prc-badge">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                PRC-Licensed Geodetic Engineers
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#coverage">Coverage Area</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li><a href="#services">Relocation Survey</a></li>
+                <li><a href="#services">Subdivision Survey</a></li>
+                <li><a href="#services">Topographic Survey</a></li>
+                <li><a href="#services">Sketch &amp; Vicinity Map</a></li>
+                <li><a href="#services">Land Titling</a></li>
+                <li><a href="#services">Consultancy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-item"><span>📞</span><span><a href="tel:09064975039" style="color:rgba(255,255,255,0.6);">0906 497 5039</a></span></div>
+            <div class="footer-contact-item"><span>📍</span><span>Brgy. Sabit, Cuyapo, Nueva Ecija</span></div>
+            <div class="footer-contact-item"><span>📍</span><span>Brgy. Salvacion, Rosales, Pangasinan</span></div>
+            <div class="footer-contact-item"><span>🕐</span><span>Mon – Sat: 8:00 AM – 5:00 PM</span></div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 C.P. Verueco Land Surveying Services. All rights reserved.</span>
+        <span>Licensed Geodetic Engineers · Nueva Ecija &amp; Pangasinan, Philippines</span>
+    </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     12. FLOATING BUTTONS — Messenger + Viber + Call Now
+════════════════════════════════════════════════════════════════════════ -->
+<div class="float-stack">
+    <a href="https://m.me/cpverueco" class="float-btn fb-btn" target="_blank" rel="noopener" aria-label="Chat on Messenger">
+        <!-- Messenger icon -->
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.952 1.444 5.58 3.7 7.3V22l3.37-1.85c.9.25 1.85.385 2.93.385 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.008 12.44l-2.55-2.72-4.976 2.72 5.474-5.81 2.613 2.72 4.913-2.72-5.474 5.81z"/>
+        </svg>
+        <span class="float-tooltip">Chat on Messenger</span>
+    </a>
+    <a href="viber://chat?number=%2B639064975039" class="float-btn vb-btn" aria-label="Chat on Viber">
+        <!-- Viber phone bubble icon -->
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.003 0C5.925 0 1 4.744 1 10.586c0 3.237 1.56 6.13 4.005 8.07V22l3.44-1.887c.994.273 2.046.42 3.134.42.13 0 .26-.003.39-.008l-.001-.003C17.887 20.254 23 15.653 23 10.026 23 4.485 18.073 0 12.003 0zM7.22 13.673c-.29.29-.67.435-1.05.435-.382 0-.762-.145-1.05-.435a1.48 1.48 0 010-2.1l1.05-1.05a1.48 1.48 0 012.1 0 1.48 1.48 0 010 2.1l-1.05 1.05zm2.888 2.59c-.29.29-.67.435-1.05.435-.382 0-.762-.145-1.05-.435a1.48 1.48 0 010-2.1l3.15-3.15c.87-.87 1.35-2.03 1.35-3.273V6.69h1.5v.05c0 1.633-.637 3.168-1.793 4.323l-3.107 3.2zm5.842-1.577l-.617.617-.617-.617V13.64c0-1.94-.755-3.76-2.13-5.133L11.97 7.89l-1.057-1.057.617-.617.617.617 1.617 1.616c1.627 1.627 2.52 3.79 2.52 6.09v.147z"/>
+        </svg>
+        <span class="float-tooltip">Chat on Viber</span>
+    </a>
+</div>
+
+<a href="tel:09064975039" class="float-call" id="floatCall">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Now
+</a>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+    'use strict';
+
+    /* ── NAV: scroll behavior + mobile toggle ── */
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    /* ── TESTIMONIAL SLIDER (mobile only) ── */
+    var tIdx = 0;
+    var tTotal = 3;
+    var tTrack = document.getElementById('tTrack');
+    var sDots = document.querySelectorAll('.s-dot');
+
+    function updateSlider() {
+        if (window.innerWidth <= 768) {
+            tTrack.style.transform = 'translateX(-' + (tIdx * 100) + '%)';
+        } else {
+            tTrack.style.transform = '';
+        }
+        sDots.forEach(function (d, i) {
+            d.classList.toggle('active', i === tIdx);
+        });
+    }
+
+    window.nextSlide = function () {
+        tIdx = (tIdx + 1) % tTotal;
+        updateSlider();
+    };
+    window.prevSlide = function () {
+        tIdx = (tIdx - 1 + tTotal) % tTotal;
+        updateSlider();
+    };
+
+    window.addEventListener('resize', updateSlider, { passive: true });
+
+    /* ── FAQ ACCORDION ── */
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var item = btn.parentElement;
+            var isOpen = item.classList.contains('open');
+            // close all
+            document.querySelectorAll('.faq-item').forEach(function (i) {
+                i.classList.remove('open');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+
+    /* ── SCROLL REVEAL ── */
+    var revealEls = document.querySelectorAll('.reveal');
+    var revealObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(function (el) {
+        revealObs.observe(el);
+    });
+
+    /* ── COUNT-UP ANIMATION ── */
+    var countEls = document.querySelectorAll('[data-count]');
+    var countObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var el = entry.target;
+                var target = parseInt(el.getAttribute('data-count'), 10);
+                var start = 0;
+                var duration = 1600;
+                var startTime = null;
+
+                function step(ts) {
+                    if (!startTime) startTime = ts;
+                    var progress = Math.min((ts - startTime) / duration, 1);
+                    var ease = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.floor(ease * target) + '+';
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+
+                requestAnimationFrame(step);
+                countObs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    countEls.forEach(function (el) {
+        countObs.observe(el);
+    });
+
+    /* ── CONTACT FORM ── */
+    var form = document.getElementById('contact-form');
+    var successMsg = document.getElementById('formSuccess');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var btn = form.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+            // Simulate submission (wire up to real backend/Formspree/Web3Forms as needed)
+            setTimeout(function () {
+                successMsg.style.display = 'block';
+                form.reset();
+                btn.textContent = 'Send Inquiry';
+                btn.disabled = false;
+                setTimeout(function () {
+                    successMsg.style.display = 'none';
+                }, 6000);
+            }, 1200);
+        });
+    }
+
+})();
+</script>
+
+</body>
+</html>
